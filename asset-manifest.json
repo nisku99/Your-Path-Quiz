@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/your-path-quiz/static/css/main.b100e6da.chunk.css",
+    "main.js": "/your-path-quiz/static/js/main.5cdb6df4.chunk.js",
+    "main.js.map": "/your-path-quiz/static/js/main.5cdb6df4.chunk.js.map",
+    "runtime-main.js": "/your-path-quiz/static/js/runtime-main.86e143ea.js",
+    "runtime-main.js.map": "/your-path-quiz/static/js/runtime-main.86e143ea.js.map",
+    "static/js/2.252fab16.chunk.js": "/your-path-quiz/static/js/2.252fab16.chunk.js",
+    "static/js/2.252fab16.chunk.js.map": "/your-path-quiz/static/js/2.252fab16.chunk.js.map",
+    "index.html": "/your-path-quiz/index.html",
+    "precache-manifest.3fef0311b23ff994961f3c6caf80a90e.js": "/your-path-quiz/precache-manifest.3fef0311b23ff994961f3c6caf80a90e.js",
+    "service-worker.js": "/your-path-quiz/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/your-path-quiz/static/css/main.b100e6da.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86e143ea.js",
+    "static/js/2.252fab16.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.5cdb6df4.chunk.js"
+  ]
+}
