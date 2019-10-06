@@ -13,7 +13,7 @@ function Start(props) {
                 background: 'red',
                 marginRight: 'auto',
                 marginLeft: 'auto',
-                marginTop: '50%',
+                marginTop: '15%',
                 fontSize: 40
             }}
             onClick={onClick}
