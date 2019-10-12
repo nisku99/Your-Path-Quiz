@@ -62,15 +62,19 @@ function App() {
   const now = Math.floor(questionNumber * 10000 / questions.length) / 100;
 
   return (
-    <div className="App">
-      <h1>This Quiz is your Gain</h1>
+    <div className="App" style={{fontFamily: "'Great Vibes', cursive"}}>
 
+      <h1 style={{paddingTop: 50, fontWeight: 'bold', fontSize: 60}}>This Quiz is your Reward</h1>
+      <h2 style={{paddingTop: 50, fontSize: 50, fontWeight: 'bold'}}>{statements[startQuestion]}</h2>
+      
       {questionNumber === -1 ? <div>      
-        <br></br><br></br>
-        <h2>{statements[startQuestion]}</h2>
+        <h3 style={{paddingTop: 50, fontSize: 35, fontWeight: 'bold'}}>Compare your results with friends that have taken the quiz!</h3>
+        <h3 style={{paddingTop: 50, fontSize: 35, fontWeight: 'bold'}}>Patience may be associated with happier relationships and higher earning potential, so please forgive any slow loading times!</h3>
         <Start onClick={() => { setQuestionNumber(questionNumber + 1); setStartTime(new Date()); } }>
         </Start></div>: null}
-      {questionNumber !== -1 ? <ProgressBar now={now} label={`${now}%`} /> : null }
+        <br></br>
+        {questionNumber !== -1 && !done ? <div style={{fontSize: 30}}>Prediction Strength:</div> : null }
+      {questionNumber !== -1 && !done ? <ProgressBar style={{marginLeft: "10%", marginRight: "10%"}} now={now} label={`${now}%`} /> : null }
       {questionNumber >= 0 && questionNumber < questions.length && showQuestion && !done && !showSpinner ?
         <div>
         
@@ -80,12 +84,12 @@ function App() {
             setTimeout(() => {
               setQuestionNumber(questionNumber + 1);
               setShowSpinner(false);
-            }, (questionNumber + 1) * 1000)
+            }, Math.random(0) * (questionNumber + 1) * 1000)
         }}>
         </Question>
         <br></br>
         <br></br>
-        <button style={{background: 'red', color: 'white'}} onClick={() => {setDone(true); setEndTime(new Date())}}>Forget it, I quit the quiz</button>
+        <button style={{background: 'red', color: 'white', fontSize: 30}} onClick={() => {setDone(true); setEndTime(new Date())}}>Forget it, I quit the quiz</button>
 
         </div>
          : null
@@ -95,7 +99,7 @@ function App() {
       {showSpinner ? <Spinner animation="border"></Spinner> : null}
 
       {
-        questionNumber >= questions.length || done ? <End totalTime={`${minutes} mintues and ${seconds} seconds`} numQuestions={questionNumber} startQuestion={statements[startQuestion]} ></End> : null
+        questionNumber >= questions.length || done ? <End totalTime={`${minutes} minutes and ${seconds} seconds`} numQuestions={questionNumber} startQuestion={statements[startQuestion]} ></End> : null
       }
 
 

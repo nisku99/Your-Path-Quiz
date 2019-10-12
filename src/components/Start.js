@@ -9,8 +9,8 @@ function Start(props) {
         >
             <button
             style={{
-                color: 'white',
-                background: 'red',
+                color: 'red',
+                background: 'white',
                 marginRight: 'auto',
                 marginLeft: 'auto',
                 marginTop: '15%',
@@ -18,7 +18,7 @@ function Start(props) {
             }}
             onClick={onClick}
         >
-            START QUIZ!
+            Start Quiz!
         </button>
     </div>
     
