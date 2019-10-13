@@ -62,14 +62,14 @@ function App() {
   const now = Math.floor(questionNumber * 10000 / questions.length) / 100;
 
   return (
-    <div className="App" style={{fontFamily: "'Great Vibes', cursive"}}>
+    <div className="App" style={{fontFamily: "'Courgette', cursive"}}>
 
       <h1 style={{paddingTop: 50, fontWeight: 'bold', fontSize: 60}}>This Quiz is your Reward</h1>
       <h2 style={{paddingTop: 50, fontSize: 50, fontWeight: 'bold'}}>{statements[startQuestion]}</h2>
       
       {questionNumber === -1 ? <div>      
         <h3 style={{paddingTop: 50, fontSize: 35, fontWeight: 'bold'}}>Compare your results with friends that have taken the quiz!</h3>
-        <h3 style={{paddingTop: 50, fontSize: 35, fontWeight: 'bold'}}>Patience may be associated with happier relationships and higher earning potential, so please forgive any slow loading times!</h3>
+        <h3 style={{paddingTop: 50, fontSize: 35, fontWeight: 'bold'}}>“Patience may be associated with happier relationships and higher earning potential, so please forgive any slow loading times!” -- <a href="https://www.mindful.org/the-benefits-of-being-a-patient-person/">Mindful.org</a></h3>
         <Start onClick={() => { setQuestionNumber(questionNumber + 1); setStartTime(new Date()); } }>
         </Start></div>: null}
         <br></br>
